@@ -45,6 +45,11 @@ Pada langkah 1 kode tersebut hanya menampilkan pesan error ketika fungsi tersebu
 
 
 ## Praktikum 6: Menggunakan Future dengan StatefulWidget
+### Soal 12
+ Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+ Jawaban: Bisa, Hal ini dikarenakan pada saat browser terbuka dan meminta izin akses lokasi saya izinkan.
+
+ ![Alt text](assets\img\soal12.gif)
 
 ## Praktikum 7: Manajemen Future dengan FutureBuilder
 

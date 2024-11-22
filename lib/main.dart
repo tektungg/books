@@ -42,9 +42,7 @@ class _FuturePageState extends State<FuturePage> {
           const Spacer(),
           ElevatedButton(
             child: const Text('GO!'),
-            onPressed: () {
-              count();
-            },
+            // Praktikum 1
             // onPressed: () {
             //   setState(() {});
             //   getData().then((value) {
@@ -55,6 +53,17 @@ class _FuturePageState extends State<FuturePage> {
             //     setState(() {});
             //   });
             // },
+            // Praktikum 2
+            // onPressed: () {
+            //   count();
+            // },
+            // Praktikum 3
+            onPressed: () {
+              getNumber().then((value) {
+                result = value.toString();
+                setState(() {});
+              });
+            },
           ),
           const Spacer(),
           Text(result),
@@ -96,5 +105,18 @@ class _FuturePageState extends State<FuturePage> {
     setState(() {
       result = total.toString();
     });
+  }
+
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
   }
 }

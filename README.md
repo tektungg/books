@@ -18,3 +18,20 @@ Pada langkah 1 kita menambahkan 3 method yang digunakan untuk menambahkan waktu 
 
 ![Alt text](assets\img\soal4.gif)
 
+## Praktikum 3: Menggunakan Completer di Future
+### Soal 5
+Pada langkah 2 kita menambahkan 2 method baru pada main.dart. method pertama digunakan untuk mendapatkan angka, sedangkan completer digunakan untuk menyelesaikan method dengan waktu yang sudah ditentukan. Sedangkan method kedua digunakan untuk memberikan/mengirimkan angka saat method ini dipanggul/digunakan.
+
+![Alt text](assets\img\soal5.gif)
+
+## Praktikum 4: Memanggil Future secara paralel
+
+## Praktikum 5: Menangani Respon Error pada Async Code
+
+## Praktikum 6: Menggunakan Future dengan StatefulWidget
+
+## Praktikum 7: Manajemen Future dengan FutureBuilder
+
+## Praktikum 8: Navigation route dengan Future Function
+
+## Praktikum 9: Memanfaatkan async/await dengan Widget Dialog

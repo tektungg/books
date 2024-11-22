@@ -41,6 +41,8 @@ Perbedaan dalam penggunaan FutureGroup dan Future.wait terletak pada tingkat fle
 ![Alt text](assets\img\soal9.gif)
 
 ### Soal 10
+Pada langkah 1 kode tersebut hanya menampilkan pesan error ketika fungsi tersebut dipanggil, sedangkan pada langkah 4 memanfaatkan try-catch untuk memastikan proses pemanggiran fungsi returnError() berjalan dengan benar dan jika terdapat error, kode pada bagian catch akan dijalankan untuk menampilkan pesan error,
+
 
 ## Praktikum 6: Menggunakan Future dengan StatefulWidget
 

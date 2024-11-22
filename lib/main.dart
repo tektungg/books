@@ -74,7 +74,7 @@ class _FuturePageState extends State<FuturePage> {
               // },
               // Praktikum 5
               onPressed: () {
-                returnError().then((value) {
+                handleError().then((value) {
                   setState(() {
                     result = 'Success';
                   });
@@ -168,5 +168,17 @@ class _FuturePageState extends State<FuturePage> {
   Future returnError() async {
     await Future.delayed(const Duration(seconds: 2));
     throw Exception('An error occurred');
+  }
+
+  Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Completed');
+    }
   }
 }

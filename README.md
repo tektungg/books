@@ -30,6 +30,8 @@ Pada langkah 5 kita membungkus kode yang sudah kita buat sebelumnya pada langkah
 ![Alt text](assets\img\soal6.gif)
 
 ## Praktikum 4: Memanggil Future secara paralel
+### Soal 7
+![Alt text](assets\img\soal7.gif)
 
 ## Praktikum 5: Menangani Respon Error pada Async Code
 

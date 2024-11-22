@@ -24,6 +24,11 @@ Pada langkah 2 kita menambahkan 2 method baru pada main.dart. method pertama dig
 
 ![Alt text](assets\img\soal5.gif)
 
+### Soal 6
+Pada langkah 5 kita membungkus kode yang sudah kita buat sebelumnya pada langkah 2 menggunakan try-catch. Penggunaan try-catch ini berfungsi untuk menghandle error yang muncul saat program sedang berjalan. Sedangkan langkah 6 memiliki fungsi yang hampir sama dengan langkah 5, tetapi pada langkah ini berguna untuk menghandle error saat button ditekan.
+
+![Alt text](assets\img\soal6.gif)
+
 ## Praktikum 4: Memanggil Future secara paralel
 
 ## Praktikum 5: Menangani Respon Error pada Async Code

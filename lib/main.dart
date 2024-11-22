@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
@@ -60,8 +61,11 @@ class _FuturePageState extends State<FuturePage> {
             // Praktikum 3
             onPressed: () {
               getNumber().then((value) {
-                result = value.toString();
-                setState(() {});
+                setState(() {
+                  result = value.toString();
+                });
+              }).catchError((e) {
+                result = 'An error occurred';
               });
             },
           ),
@@ -111,12 +115,21 @@ class _FuturePageState extends State<FuturePage> {
 
   Future getNumber() {
     completer = Completer<int>();
-    calculate();
+    calculate2();
     return completer.future;
   }
 
   Future calculate() async {
     await Future.delayed(const Duration(seconds: 5));
     completer.complete(42);
+  }
+
+  calculate2() async {
+    try {
+      await new Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError({});
+    }
   }
 }

@@ -33,6 +33,10 @@ Pada langkah 5 kita membungkus kode yang sudah kita buat sebelumnya pada langkah
 ### Soal 7
 ![Alt text](assets\img\soal7.gif)
 
+### Soal 8
+Perbedaan dalam penggunaan FutureGroup dan Future.wait terletak pada tingkat fleksibilitas kedua metode tersebut. Pada FutureGroup kita dapat menambahkan Future/method secara dinamis, berbeda dengan Future.wait, kita tidak dapat melakukan hal yang sama seperti pada FutureGroup karena metode ini akan menambahkan Future/method saat Future.wait dijalankan. Oleh karena itu, FutureGroup dinilai lebih fleksibel dalam penambahan Future/method baru
+
+
 ## Praktikum 5: Menangani Respon Error pada Async Code
 
 ## Praktikum 6: Menggunakan Future dengan StatefulWidget

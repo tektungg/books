@@ -42,37 +42,48 @@ class _FuturePageState extends State<FuturePage> {
         children: [
           const Spacer(),
           ElevatedButton(
-            child: const Text('GO!'),
-            // Praktikum 1
-            // onPressed: () {
-            //   setState(() {});
-            //   getData().then((value) {
-            //     result = value.body.toString().substring(0, 450);
-            //     setState(() {});
-            //   }).catchError((_) {
-            //     result = 'An error occured';
-            //     setState(() {});
-            //   });
-            // },
-            // Praktikum 2
-            // onPressed: () {
-            //   count();
-            // },
-            // Praktikum 3
-            // onPressed: () {
-            //   getNumber().then((value) {
-            //     setState(() {
-            //       result = value.toString();
-            //     });
-            //   }).catchError((e) {
-            //     result = 'An error occurred';
-            //   });
-            // },
-            // Praktikum 4
-            onPressed: () {
-              returnFG();
-            },
-          ),
+              child: const Text('GO!'),
+              // Praktikum 1
+              // onPressed: () {
+              //   setState(() {});
+              //   getData().then((value) {
+              //     result = value.body.toString().substring(0, 450);
+              //     setState(() {});
+              //   }).catchError((_) {
+              //     result = 'An error occured';
+              //     setState(() {});
+              //   });
+              // },
+              // Praktikum 2
+              // onPressed: () {
+              //   count();
+              // },
+              // Praktikum 3
+              // onPressed: () {
+              //   getNumber().then((value) {
+              //     setState(() {
+              //       result = value.toString();
+              //     });
+              //   }).catchError((e) {
+              //     result = 'An error occurred';
+              //   });
+              // },
+              // Praktikum 4
+              // onPressed: () {
+              //   returnFG();
+              // },
+              // Praktikum 5
+              onPressed: () {
+                returnError().then((value) {
+                  setState(() {
+                    result = 'Success';
+                  });
+                }).catchError((onError) {
+                  setState(() {
+                    result = onError.toString();
+                  });
+                }).whenComplete(() => print('Completed'));
+              }),
           const Spacer(),
           Text(result),
           const Spacer(),
@@ -152,5 +163,10 @@ class _FuturePageState extends State<FuturePage> {
         result = total.toString();
       });
     });
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('An error occurred');
   }
 }
